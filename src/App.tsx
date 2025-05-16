@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { AnimatedCanvas } from './components';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './assets/styles/App.css';
@@ -8,6 +9,7 @@ export const App = () => {
 
   return (
     <>
+      <AnimatedCanvas />
       <div className="bg-gray-100 p-4">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
