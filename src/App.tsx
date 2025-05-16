@@ -1,5 +1,5 @@
 import { AnimatedCanvas, FloatingButtons, MainCopywriting } from './components';
-import './assets/styles/App.css';
+import './styles/App.css';
 
 export const App = () => {
   return (
