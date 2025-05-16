@@ -1,4 +1,4 @@
-import { AnimatedCanvas, MainCopywriting } from './components';
+import { AnimatedCanvas, FloatingButtons, MainCopywriting } from './components';
 import './assets/styles/App.css';
 
 export const App = () => {
@@ -6,6 +6,7 @@ export const App = () => {
     <>
       <AnimatedCanvas />
       <MainCopywriting />
+      <FloatingButtons />
     </>
   )
 }
