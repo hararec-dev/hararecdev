@@ -3,11 +3,11 @@ import type { MainCopywritingText } from "../types";
 export const getHeroMainCopywriting = async (): Promise<MainCopywritingText> => {
     return [
         { text: "Transforma tu negocio con ", font: "sans-serif" },
-        { text: "ia", font: "handwriting" },
-        { text: ", ", font: "sans-serif" },
-        { text: "websites", font: "handwriting" },
+        { text: "Apps", font: "handwriting" },
+        { text: " ", font: "sans-serif" },
+        { text: "Móviles", font: "handwriting" },
         { text: " y ", font: "sans-serif" },
-        { text: "apps", font: "handwriting" },
+        { text: "APIs", font: "handwriting" },
         { text: " que generan resultados", font: "sans-serif" },
     ];
 };

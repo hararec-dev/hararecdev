@@ -18,7 +18,7 @@ export const FloatingButtons = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 right-7 md:bottom-7 md:right-7 flex flex-col space-y-4 z-[99999]">
+    <div className="fixed bottom-7 right-7 flex flex-col space-y-4 z-[99999]">
       {socialLinks.map((link, index) => (
         (!(windowSize.width <= 768 && windowSize.height > windowSize.width) || link.isVisibleInMobile) && (
           <MotionDiv key={index} transition={{ duration: 1, delay: link.delay }}>
