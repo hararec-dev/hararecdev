@@ -22,21 +22,33 @@ Este proyecto fue construido utilizando las siguientes tecnologías:
 
 ## 🛠️ Configuración
 
-```bash
-# Clona el repositorio:
-git clone https://github.com/hararec-dev/hararecdev.git
-# Navega al directorio del proyecto:
-cd hararecdev
-# Instala las dependencias:
-yarn add
-# Inicia el servidor de desarrollo:
-yarn dev
-# Accede a `http://localhost:5173`.
-# Genera la versión de producción:
-yarn build
-# Previsualiza la versión de producción:
-yarn preview
-```
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/hararec-dev/hararecdev.git
+    cd hararecdev
+    ```
+
+2. Instala las dependencias:
+    ```bash
+    yarn add
+    ```
+
+3. Inicia el servidor de desarrollo:
+    ```bash
+    yarn dev
+    ```
+    Accede a [http://localhost:5173/](http://localhost:5173).
+
+4. Genera la versión de producción:
+    ```bash
+    yarn build
+    ```
+    Los archivos listos para desplegar estarán en la carpeta `dist`.
+
+5. Previsualiza la versión de producción:
+    ```bash
+    yarn preview
+    ```
 
 Los archivos listos para desplegar estarán en la carpeta `dist`.
 
