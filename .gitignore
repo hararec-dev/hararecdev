@@ -23,6 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
+# Environment
+.env
+.env.*
+.env.local
+
 # Custom files
 *.debug.ts
 *.debug.js
