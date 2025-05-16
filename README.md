@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# 💼 Portafolio - Hararecdev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Descripción
 
-Currently, two official plugins are available:
+Este repositorio contiene el código fuente de mi portafolio personal como **Freelancer** especializado en el desarrollo de Aplicaciones Móviles y APIs. El sitio está diseñado con un enfoque minimalista y moderno, buscando ofrecer una experiencia de usuario clara y directa.
+<!-- 🚀 Badges -->
+[![Build Status](https://github.com/hararec-dev/hararecdev/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/hararec-dev/hararecdev/actions)  
+[![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-blue?style=flat&logo=github)](https://hararec-dev.github.io/hararecdev)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías Utilizadas
 
-## Expanding the ESLint configuration
+Este proyecto fue construido utilizando las siguientes tecnologías:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Frontend:**
+    * ⚛️ [React](https://reactjs.org/) - Para la construcción de la interfaz de usuario.
+    * 📘 [TypeScript](https://www.typescriptlang.org/) - Para un desarrollo más robusto y tipado estático.
+    * 💨 [Tailwind CSS](https://v2.tailwindcss.com/docs/) - Para un diseño rápido y utilitario.
+    * ⚡ [Vite](https://vitejs.dev/) - Como herramienta de construcción y servidor de desarrollo frontend.
+    * 🧶 [Yarn](https://yarnpkg.com/) - Como gestor de paquetes y dependencias.
+* **Despliegue:**
+    * 📄 [GitHub Pages](https://pages.github.com/) - Para el hosting del sitio estático.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Configuración
+
+```bash
+# Clona el repositorio:
+git clone https://github.com/hararec-dev/hararecdev.git
+# Navega al directorio del proyecto:
+cd hararecdev
+# Instala las dependencias:
+yarn add
+# Inicia el servidor de desarrollo:
+yarn dev
+# Accede a `http://localhost:5173`.
+# Genera la versión de producción:
+yarn build
+# Previsualiza la versión de producción:
+yarn preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Los archivos listos para desplegar estarán en la carpeta `dist`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📜 Despliegue en GitHub Pages
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Este sitio está desplegado utilizando GitHub Pages directamente desde la rama `gh-pages` y la carpeta `dist` generada por el build de Vite. Cualquier push a la rama principal actualiza automáticamente el sitio desplegado gracias a las GitHub Actions.
+
+## 🤝 Contribuciones
+
+Las sugerencias y contribuciones son bienvenidas. Si encuentras algún error o tienes alguna idea para mejorar el portafolio, por favor, abre un *issue* o envía un *pull request*.
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+## 📬 Contacto
+
+Si estás interesado en mis servicios o quieres conectar, no dudes en contactarme:
+
+[![Connect on LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hararec-dev/)
+[![Email Me](https://img.shields.io/badge/Email_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hararecdev@gmail.com)
+[![Follow on X](https://img.shields.io/badge/Follow_on_X-1DA1F2?style=for-the-badge&logo=X&logoColor=white)](https://x.com/hararec_dev)
+
+## 📜 Agradecimientos
+Agradezco a todos aquellos que contribuyen al desarrollo de este proyecto.
+
+Hecho con ❤️ por Hararecdev.
