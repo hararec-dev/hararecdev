@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { MotionDiv } from "./MotionDiv";
 import { GradientText } from "./GradientText";
+import { BootstrapIcon } from "./BootstrapIcon";
 import { getHeroMainCopywriting } from "../helpers";
 import type { CopywritingItem } from "../types";
-import { BootstrapIcon } from "./BootstrapIcon";
 
 export const MainCopywriting: React.FC = () => {
     return (
@@ -25,11 +25,11 @@ const Header: React.FC = () => {
     }, []);
 
     return (
-        <h1 className="mb-5 text-4xl font-black lg:text-6xl text-black dark:text-white">
+        <h1 className="mb-5 text-4xl font-black lg:text-6xl text-black dark:text-white md:mx-4">
             {copywriting.map((item, index) => {
                 const isHandwriting = item.font === 'handwriting';
                 return isHandwriting ? (
-                    <GradientText key={index} className="text-5xl font-medium lg:text-6xl">
+                    <GradientText key={index}>
                         {item.text}
                     </GradientText>
                 ) : (
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
 };
 
 const Description: React.FC = () => (
-    <p className={`mb-5 mx-auto md:mx-10 text-start text-lg !leading-relaxed text-foreground-light dark:text-foreground-dark sm:text-lg md:text-xl opacity-70 px-10 sm:px-12 md:px-0`}>
+    <p className={`mb-5 mx-auto md:mx-10 text-start text-lg !leading-relaxed text-foreground-light dark:text-foreground-dark sm:text-lg md:text-xl px-10 sm:px-12 md:px-0`}>
         ¿Permitirás que la competencia te deje atrás? Impulsa tu negocio con apps móviles, APIs e inteligencia artificial para destacar y crecer de manera sencilla y sin costos ocultos.
     </p>
 );
