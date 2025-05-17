@@ -1,5 +1,7 @@
 # 💼 Portafolio - Hararecdev
 
+![logo](./public/logo.jpg)
+
 ## ✨ Descripción
 
 Este repositorio contiene el código fuente de mi portafolio personal como **Freelancer** especializado en el desarrollo de Aplicaciones Móviles y APIs. El sitio está diseñado con un enfoque minimalista y moderno, buscando ofrecer una experiencia de usuario clara y directa.
@@ -25,6 +27,7 @@ Este proyecto fue construido utilizando las siguientes tecnologías:
 1. Clona el repositorio:
     ```bash
     git clone https://github.com/hararec-dev/hararecdev.git
+    # acceso a la carpeta
     cd hararecdev
     ```
 
@@ -37,13 +40,11 @@ Este proyecto fue construido utilizando las siguientes tecnologías:
     ```bash
     yarn dev
     ```
-    Accede a [http://localhost:5173/](http://localhost:5173).
 
 4. Genera la versión de producción:
     ```bash
     yarn build
     ```
-    Los archivos listos para desplegar estarán en la carpeta `dist`.
 
 5. Previsualiza la versión de producción:
     ```bash
