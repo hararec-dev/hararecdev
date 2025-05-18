@@ -1,9 +1,8 @@
 import { useEffect, useRef } from 'react';
-import type { RefObject } from 'react';
-import type { CanvasPoint } from '../types';
+import type { CanvasPoint } from '../../types';
 
-export const AnimatedCanvas = () => {
-  const canvasRef: RefObject<HTMLCanvasElement> = useRef<HTMLCanvasElement>(null);
+export const BackgroundCanvas = () => {
+  const canvasRef: React.RefObject<HTMLCanvasElement> = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -105,5 +104,15 @@ export const AnimatedCanvas = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} style={{ position: 'absolute', bottom: 0, left: 0, zIndex: -1 }} />;
+  return <canvas
+    ref={canvasRef}
+    style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: -1
+    }}
+  />;
 };
