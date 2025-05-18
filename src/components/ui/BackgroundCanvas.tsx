@@ -1,9 +1,8 @@
 import { useEffect, useRef } from 'react';
-import type { RefObject } from'react';
-import type { CanvasPoint } from '../types';
+import type { CanvasPoint } from '../../types';
 
-export const AnimatedCanvas = () => {
-  const canvasRef: RefObject<HTMLCanvasElement> = useRef<HTMLCanvasElement>(null);
+export const BackgroundCanvas = () => {
+  const canvasRef: React.RefObject<HTMLCanvasElement> = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -14,6 +13,27 @@ export const AnimatedCanvas = () => {
     const height: number = window.innerHeight;
     canvas.width = width;
     canvas.height = height;
+
+    const palette = {
+      light: {
+        background: "#F4F4F5", // gray-100
+        line: "#E879F9",       // indigo-900 (primary)
+        accent: "#E879F9",     // teal-400 (accent)
+      },
+      dark: {
+        background: "#0F172A", // gray-900
+        line: "#C026D3",       // indigo-300 (primary en dark)
+        accent: "#D946EF",     // teal-300 (accent en dark)
+      }
+    };
+
+    // Detectar modo oscuro
+    const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const colors = isDark ? palette.dark : palette.light;
+
+    // Pintar fondo
+    ctx.fillStyle = colors.background;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     const points: CanvasPoint[] = [];
     const numPoints: number = width <= 768 && height > width ? 100 : 200;
@@ -31,7 +51,8 @@ export const AnimatedCanvas = () => {
 
     // Animar puntos
     const animate = (): void => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = colors.background;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Dibujar líneas entre puntos cercanos
       for (let i = 0; i < points.length; i++) {
@@ -42,7 +63,10 @@ export const AnimatedCanvas = () => {
           if (distance < 100) {
             const alpha: string = Math.floor((1 - distance / 100) * 255).toString(16).padStart(2, '0');
             ctx.beginPath();
-            ctx.strokeStyle = `#c026d3${alpha}`;
+            // Alternar entre primary y accent para dar variedad
+            ctx.strokeStyle = (i % 3 === 0)
+              ? `${colors.accent}${alpha}`
+              : `${colors.line}${alpha}`;
             ctx.lineWidth = width <= 768 && height > width ? 0.7 : 0.8;
             ctx.moveTo(points[i].x, points[i].y);
             ctx.lineTo(points[j].x, points[j].y);
@@ -80,5 +104,15 @@ export const AnimatedCanvas = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} style={{ position: 'absolute', bottom: 0, left: 0, zIndex: -1 }} />;
+  return <canvas
+    ref={canvasRef}
+    style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: -1
+    }}
+  />;
 };
