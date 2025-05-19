@@ -1,5 +1,6 @@
 import { NavbarLayout } from "../layout";
 import { Logo, MobileMenuButton, NavLinks } from "../navbar";
+import { ThemeToggleButton } from "../navbar/ThemeToggleButton";
 
 export const Navbar: React.FC = ({ }) => {
     return (
@@ -7,6 +8,7 @@ export const Navbar: React.FC = ({ }) => {
             <Logo />
             <MobileMenuButton />
             <NavLinks />
+            <ThemeToggleButton />
         </NavbarLayout>
     );
 };
