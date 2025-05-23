@@ -7,7 +7,7 @@ export const App = () => {
       <BackgroundCanvas />
       <Navbar />
       <Hero />
-      <Main />
+      {/* <Main /> */}
       <Footer />
     </ThemeProvider>
   )
