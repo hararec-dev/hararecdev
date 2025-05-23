@@ -1,13 +1,10 @@
-import { MainLayout } from "../layout";
 import {
     AssessmentsSection,
     ClassManagement,
     ClassroomFeatures,
     DiscussionsSection,
-    FeatureButton,
     FeatureCard,
     IntegrationsSection,
-    MainContent,
     NewsSection,
     TeachingTools,
     UIFeatureItem,
@@ -17,20 +14,18 @@ import {
 
 export const Main: React.FC = ({ }) => {
     return (
-        <MainLayout>
+        <div>
             <AssessmentsSection />
             <ClassManagement />
             <ClassroomFeatures />
             <DiscussionsSection />
-            <FeatureButton />
             <FeatureCard />
             <IntegrationsSection />
-            <MainContent />
             <NewsSection />
             <TeachingTools />
             <UIFeatureItem />
             <UserInterface />
             <UserTypeCard />
-        </MainLayout>
+        </div>
     );
 };

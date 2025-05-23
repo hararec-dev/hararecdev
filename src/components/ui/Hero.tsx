@@ -1,15 +1,13 @@
-import { HeroButtons, HeroContent, HeroDescription, HeroImage, HeroTitle, HeroWave } from "../hero";
-import { HeroLayout } from "../layout";
+import { HeroMainCopywriting, HeroImage } from "../hero";
 
 export const Hero: React.FC = ({ }) => {
     return (
-        <HeroLayout>
-            <HeroButtons />
-            <HeroContent />
-            <HeroDescription />
+        <header
+            id="hero"
+            className="font-work mt-28 max-w-screen-xl px-10 flex flex-col lg:flex-row items-center justify-center"
+        >
+            <HeroMainCopywriting />
             <HeroImage />
-            <HeroTitle />
-            <HeroWave />
-        </HeroLayout>
+        </header>
     );
 };
