@@ -6,5 +6,4 @@ export interface SocialLink {
     ariaLabel: string;
     iconName: string;
     delay: number;
-    isVisibleInMobile: boolean;
 }

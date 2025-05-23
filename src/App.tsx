@@ -1,12 +1,14 @@
-import { AnimatedCanvas, FloatingButtons, MainCopywriting } from './components';
-import './styles/App.css';
+import { BackgroundCanvas, Footer, Hero, Main, Navbar } from './components';
+import { ThemeProvider } from './context';
 
 export const App = () => {
   return (
-    <>
-      <AnimatedCanvas />
-      <MainCopywriting />
-      <FloatingButtons />
-    </>
+    <ThemeProvider>
+      <BackgroundCanvas />
+      <Navbar />
+      <Hero />
+      {/* <Main /> */}
+      <Footer />
+    </ThemeProvider>
   )
 }
