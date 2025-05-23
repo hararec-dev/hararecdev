@@ -9,8 +9,7 @@ export const getSocialLinks = (): SocialLink[] => {
             shadowColor: 'shadow-green-500/70',
             ariaLabel: 'WhatsApp',
             iconName: 'whatsapp',
-            delay: 1,
-            isVisibleInMobile: true,
+            delay: 0.2,
         },
         {
             href: 'tel:+525542084239',
@@ -19,8 +18,7 @@ export const getSocialLinks = (): SocialLink[] => {
             shadowColor: 'shadow-blue-500/70',
             ariaLabel: 'Llamada',
             iconName: 'telephone-fill',
-            delay: 1.2,
-            isVisibleInMobile: true,
+            delay: 0.4,
         },
         {
             href: 'mailto:hararecdev@gmail.com',
@@ -29,8 +27,7 @@ export const getSocialLinks = (): SocialLink[] => {
             shadowColor: 'shadow-red-500/70',
             ariaLabel: 'Email',
             iconName: 'envelope-at-fill',
-            delay: 1.4,
-            isVisibleInMobile: true,
+            delay: 0.6,
         },
         {
             href: 'https://www.linkedin.com/in/hararec-dev',
@@ -39,8 +36,7 @@ export const getSocialLinks = (): SocialLink[] => {
             shadowColor: 'shadow-blue-700/70',
             ariaLabel: 'LinkedIn',
             iconName: 'linkedin',
-            delay: 1.6,
-            isVisibleInMobile: false,
+            delay: 0.8,
         },
         {
             href: 'https://x.com/hararec_dev',
@@ -49,8 +45,7 @@ export const getSocialLinks = (): SocialLink[] => {
             shadowColor: 'shadow-gray-800/70',
             ariaLabel: 'X',
             iconName: 'twitter-x',
-            delay: 1.8,
-            isVisibleInMobile: false,
+            delay: 1,
         },
         /* {
           href: 'https://www.facebook.com/hararec.medinagonzalez/',
@@ -60,7 +55,6 @@ export const getSocialLinks = (): SocialLink[] => {
           ariaLabel: 'Facebook',
           iconName: 'facebook',
           delay: 2,
-          isVisibleInMobile: false,
         }, */
     ];
 }
