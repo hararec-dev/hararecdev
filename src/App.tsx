@@ -1,4 +1,4 @@
-import { BackgroundCanvas, Footer, Hero, Main, Navbar } from './components';
+import { BackgroundCanvas, Footer, Hero, Navbar } from './components';
 import { ThemeProvider } from './context';
 
 export const App = () => {
