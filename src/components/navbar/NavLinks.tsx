@@ -1,20 +1,20 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggleButton } from './ThemeToggleButton';
-import type { NavLink, NavLinksProps } from '../../types';
 import { SocialLinkButtons } from '../shared';
+import type { NavLink, NavLinksProps } from '../../types';
 
 const navLinks: NavLink[] = [
     {
         text: 'Servicios',
-        href: '#services',
+        href: 'services',
     },
     {
         text: 'Portafolio',
-        href: '#portfolio',
+        href: 'portfolio',
     },
     {
         text: 'Sobre mí',
-        href: '#about',
+        href: 'about',
     }
 ];
 
@@ -66,7 +66,8 @@ export const NavLinks: React.FC<NavLinksProps> = ({ open }) => {
                     <motion.a
                         key={index}
                         variants={itemVariants}
-                        className="px-5 py-1 text-base font-poppins font-medium text-center bg-gradient-to-r from-fuchsia-200 via-fuchsia-300 to-fuchsia-300 dark:from-fuchsia-800 dark:via-fuchsia-900 dark:to-fuchsia-950 hover:from-fuchsia-300 hover:to-fuchsia-500 dark:hover:from-fuchsia-700 dark:hover:to-fuchsia-800 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:scale-105 text-background-dark dark:text-background-light rounded-full border border-fuchsia-300 dark:border-fuchsia-800 transform"
+                        className="px-5 py-1 text-base font-poppins font-medium text-center bg-gradient-to-r 
+                        from-sky-300 via-sky-400 to-sky-500 dark:from-sky-600 dark:via-sky-700 dark:to-sky-800 hover:from-sky-500 hover:to-sky-700 dark:hover:from-sky-600 dark:hover:to-sky-900 shadow-md shadow-sky-400 dark:shadow-sky-700 transition-all duration-300 ease-in-out hover:scale-105 text-gray-900 dark:text-gray-50 rounded-full border border-sky-500 dark:border-sky-800 transform"
                         href={`#${link.href}`}
                         onClick={(e) => handleScroll(e, link.href)}
                     >
