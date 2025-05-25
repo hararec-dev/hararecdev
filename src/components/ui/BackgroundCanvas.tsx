@@ -21,7 +21,7 @@ export const BackgroundCanvas = () => {
       const bgElement = document.createElement('div');
       const textElement = document.createElement('div');
       bgElement.className = isDark ? 'bg-background-dark' : 'bg-background-light';
-      textElement.className = isDark ? 'bg-fuchsia-900' : 'bg-fuchsia-300';
+      textElement.className = isDark ? 'bg-sky-800' : 'bg-sky-300';
       document.body.appendChild(bgElement);
       document.body.appendChild(textElement);
       const bgStyle = window.getComputedStyle(bgElement);

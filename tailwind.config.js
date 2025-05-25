@@ -9,8 +9,8 @@ export default {
       colors: {
         primary: {
           DEFAULT: colors.indigo[900], // #312e81 (más cercano a #2A2F4F)
-          light: colors.indigo[700],   // #4338ca
-          dark: colors.indigo[950],    // #1e1b4b
+          light: colors.indigo[500],   // #4338ca
+          dark: colors.indigo[800],    // #1e1b4b
         },
         secondary: {
           DEFAULT: colors.sky[700],    // #0369a1 (más cercano a #6096B4)
