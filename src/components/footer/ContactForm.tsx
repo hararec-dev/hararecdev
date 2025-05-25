@@ -34,7 +34,7 @@ export const ContactForm: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ amount: 0.3 }}
             >
-                <p className="font-work text-primary dark:text-dark-primary">¡Gracias, nos pondremos en contacto contigo!</p>
+                <p className="font-work text-background-light">¡Gracias, nos pondremos en contacto contigo!</p>
             </motion.div>
         )
         : (
@@ -53,7 +53,7 @@ export const ContactForm: React.FC = () => {
                         name="email"
                         type="email"
                         placeholder="Tu Email *"
-                        className={`w-full rounded-full py-2 pl-5 bg-transparent border ${emailTouched && !email.trim() ? 'border-red-500' : 'border-foreground-light dark:border-foreground-dark'} text-foreground-light`}
+                        className={`w-full rounded-full py-2 pl-5 bg-transparent border ${emailTouched && !email.trim() ? 'border-red-500' : 'border-foreground-light dark:bg-background-dark'} text-foreground-light`}
                         value={email}
                         onChange={handleEmailChange}
                         onBlur={() => setEmailTouched(true)}
@@ -76,7 +76,7 @@ export const ContactForm: React.FC = () => {
                         id="message"
                         name="message"
                         placeholder="Tu mensaje... *"
-                        className={`w-full rounded-full py-2 px-5 bg-transparent border ${messageTouched && !message.trim() ? 'border-red-500' : 'border-foreground-light dark:border-foreground-dark'} text-foreground-light resize-none`}
+                        className={`w-full rounded-full py-2 px-5 bg-transparent border ${messageTouched && !message.trim() ? 'border-red-500' : 'border-foreground-light dark:bg-background-dark'} text-foreground-light resize-none`}
                         style={{ minHeight: '42px', maxHeight: '80px' }}
                         value={message}
                         onChange={handleMessageChange}
@@ -99,7 +99,7 @@ export const ContactForm: React.FC = () => {
                     <motion.button
                         type="submit"
                         disabled={state.submitting || !isFormValid}
-                        className="w-full font-poppins font-medium px-5 py-2 rounded-full bg-gradient-to-r from-fuchsia-200 via-fuchsia-300 to-fuchsia-300 dark:from-fuchsia-800 dark:via-fuchsia-900 dark:to-fuchsia-950 hover:from-fuchsia-300 hover:to-fuchsia-500 dark:hover:from-fuchsia-700 dark:hover:to-fuchsia-800 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:scale-105 text-background-dark dark:text-background-light border border-fuchsia-300 dark:border-fuchsia-800 disabled:opacity-70 disabled:cursor-not-allowed"
+                        className="w-full font-poppins font-medium px-5 py-2 rounded-full bg-gradient-to-r from-sky-300 via-sky-400 to-sky-500 dark:from-sky-600 dark:via-sky-700 dark:to-sky-800 hover:from-sky-500 hover:to-sky-700 dark:hover:from-sky-600 dark:hover:to-sky-900 dark:shadow-sky-700 transition-all duration-300 ease-in-out hover:scale-105 text-gray-900 dark:text-gray-50 border border-sky-500 dark:border-sky-800 disabled:opacity-70 disabled:cursor-not-allowed"
                         whileHover={{ scale: isFormValid ? 1.05 : 1 }}
                         whileTap={{ scale: isFormValid ? 0.95 : 1 }}
                         transition={{ duration: 0.2 }}
