@@ -22,7 +22,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails
                 <img
                     src={mediaUrl}
                     alt={project.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-125"
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                 />
             )}
@@ -30,14 +30,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails
                 <img
                     src={mediaUrl}
                     alt={project.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-125"
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                 />
             )}
             {mediaType === 'video' && mediaUrl && (
                 <video
                     src={mediaUrl}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-125"
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                     autoPlay={isHovered} // Autoplay on hover might be too much, consider a play button
                     muted
                     loop
@@ -53,7 +53,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails
                 </div>
             )}
 
-            <div className="absolute inset-0 bg-opacity-60 transition-all duration-300 flex flex-col items-center justify-center p-4">
+            <div className="absolute inset-0 bg-opacity-60 transition-all duration-300 flex flex-col items-center justify-center p-4 hover:bg-background-dark/20">
                 <h3 className={`${project.isTextDark ? 'text-background-dark' : 'text-background-light'} backdrop-filter backdrop-blur-md rounded-2xl text-2xl font-bold font-poppins mb-8 opacity-100 transition-opacity duration-300 delay-100 text-center drop-shadow-lg py-2 px-4`}>
                     {project.posterTitle}
                 </h3>
