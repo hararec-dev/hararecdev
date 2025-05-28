@@ -9,11 +9,11 @@ export const SocialLinkButtons = () => {
     <div className="flex space-x-4 items-center justify-center">
       {socialLinks.map((link, index) => (
         <motion.div key={index}
-          transition={{ duration: 0.7, delay: link.delay }}
+          transition={{ duration: 0.5, delay: link.delay }}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ amount: 0.3 }}
+          viewport={{ amount: 0.2 }}
         >
           <a
             href={link.href}

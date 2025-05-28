@@ -25,7 +25,7 @@ export const HeroMainCopywriting: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                    <h1 className="inline font-black text-5xl sm:text-5xl lg:text-6xl font-poppins">
+                    <h1 className="inline font-black text-4xl sm:text-5xl lg:text-6xl font-poppins">
                         {copywriting.map((item, index) => {
                             const isHandwriting = item.font === 'handwriting';
                             return isHandwriting ? (
@@ -45,7 +45,7 @@ export const HeroMainCopywriting: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.7 }}
                 >
-                    <p className="my-5 text-lg md:text-xl text-start px-5 md:px-0">
+                    <p className="font-work my-5 text-lg md:text-xl text-start px-5 md:px-0">
                         ¿Permitirás que la competencia te deje atrás? Impulsa tu negocio con apps móviles, APIs e inteligencia artificial para destacar y crecer de manera sencilla y sin costos ocultos.
                     </p>
                 </motion.div>
