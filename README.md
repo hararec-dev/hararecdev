@@ -1,13 +1,13 @@
 # 💼 Portafolio - Hararecdev
 
-![logo](./public/logo.jpg)
+![logo](./public/images/logo_social.jpg)
 
 ## ✨ Descripción
 
 Este repositorio contiene el código fuente de mi portafolio personal como **Freelancer** especializado en el desarrollo de Aplicaciones Móviles y APIs. El sitio está diseñado con un enfoque minimalista y moderno, buscando ofrecer una experiencia de usuario clara y directa.
 <!-- 🚀 Badges -->
-[![Build Status](https://github.com/hararec-dev/hararecdev/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/hararec-dev/hararecdev/actions)  
 [![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-blue?style=flat&logo=github)](https://hararec-dev.github.io/hararecdev)
+[![Build Status](https://github.com/hararec-dev/hararecdev/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/hararec-dev/hararecdev/actions)  
 
 ## 🚀 Tecnologías Utilizadas
 
@@ -17,6 +17,8 @@ Este proyecto fue construido utilizando las siguientes tecnologías:
     * ⚛️ [React](https://reactjs.org/) - Para la construcción de la interfaz de usuario.
     * 📘 [TypeScript](https://www.typescriptlang.org/) - Para un desarrollo más robusto y tipado estático.
     * 💨 [Tailwind CSS](https://v2.tailwindcss.com/docs/) - Para un diseño rápido y utilitario.
+    * 🔍 [Bootstrap Icons](https://icons.getbootstrap.com/) - Para iconografía consistente y escalable.
+    * 📝 [Formspree](https://formspree.io/) - Para el manejo del formulario de contacto.
     * ⚡ [Vite](https://vitejs.dev/) - Como herramienta de construcción y servidor de desarrollo frontend.
     * 🧶 [Yarn](https://yarnpkg.com/) - Como gestor de paquetes y dependencias.
 * **Despliegue:**
@@ -76,4 +78,10 @@ Si estás interesado en mis servicios o quieres conectar, no dudes en contactarm
 ## 📜 Agradecimientos
 Agradezco a todos aquellos que contribuyen al desarrollo de este proyecto.
 
-Hecho con ❤️ por Hararecdev.
+**Créditos y recursos utilizados:**
+
+- **Logos de Tecnologías:** [svgrepo](https://www.svgrepo.com/) y [worldvectorlogo](https://worldvectorlogo.com/)
+- **Imagenes personalizadas:** [UnDrow](https://undraw.co/)
+- **Inspiración de UI:** [Proyecto "skilline-landing-page" de "mhaecal"](https://github.com/mhaecal/skilline-landing-page)
+
+Hecho con ❤️ por HararecDev.
