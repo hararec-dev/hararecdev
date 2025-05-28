@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggleButton } from './ThemeToggleButton';
 import { SocialLinkButtons } from '../shared';
-import type { NavLink, NavLinksProps } from '../../types';
+import type { NavLink } from '../../types';
 
 const navLinks: NavLink[] = [
     {
@@ -18,7 +18,7 @@ const navLinks: NavLink[] = [
     }
 ];
 
-export const NavLinks: React.FC<NavLinksProps> = ({ open }) => {
+export const NavLinks: React.FC = () => {
     const containerVariants = {
         hidden: {
             height: 0,
@@ -58,10 +58,10 @@ export const NavLinks: React.FC<NavLinksProps> = ({ open }) => {
             <motion.nav
                 variants={containerVariants}
                 initial="hidden"
-                animate={open ? "visible" : "hidden"}
-                className={`${open ? 'h-full' : 'h-0'} md:h-auto flex flex-col flex-grow md:items-center md:justify-end md:flex-row space-y-4 md:space-y-0 md:space-x-4 md:transform-none dark:text-dark-primary`}
+                animate="visible"
+                className="h-full md:h-auto flex flex-col flex-grow md:items-center md:justify-end md:flex-row space-y-4 md:space-y-0 md:space-x-4 md:transform-none dark:text-dark-primary"
             >
-                <ThemeToggleButton className='hidden sm:block'/>
+                <ThemeToggleButton className='hidden sm:block' />
                 {navLinks.map((link, index) => (
                     <motion.a
                         key={index}

@@ -1,9 +1,12 @@
 import { motion } from 'motion/react';
-import chatting from '/images/undraw_chatting_2b1g.svg';
+import chattingLight from '/images/undraw_chatting_2b1g-light.svg';
+import chattingDark from '/images/undraw_chatting_2b1g-dark.svg';
 import googlePlay from '/images/logo-google-play.svg';
 import appStore from '/images/apple-app-store.svg';
 import apiInterface from '/images/api-interface-svgrepo.svg';
 import aiIcon from '/images/ai-svgrepo.svg'; // Nueva importación
+import { ThemeContext } from '../../context';
+import { useContext } from 'react';
 
 
 const floatingElements = [
@@ -38,32 +41,36 @@ const floatingElements = [
 ];
 
 export const HeroImage: React.FC = () => {
-    return (
-        <div className="w-full lg:w-1/2 relative">
-            <motion.img
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="w-10/12 mx-auto 2xl:-mb-20"
-                src={chatting}
-                alt="Chat app"
-            />
+    const context = useContext(ThemeContext);
 
-            {floatingElements.map((element, index) => (
-                <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: element.delay }}
-                    className={element.className}
-                >
-                    <img
-                        className={element.imgClassName}
-                        src={element.src}
-                        alt={element.alt}
-                    />
-                </motion.div>
-            ))}
-        </div>
-    );
+    return !context?.theme
+        ? null
+        : (
+            <div className="w-full lg:w-1/2 relative">
+                <motion.img
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="w-10/12 mx-auto 2xl:-mb-20"
+                    src={context.theme === 'dark' ? chattingDark : chattingLight}
+                    alt="Chat app"
+                />
+
+                {floatingElements.map((element, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: element.delay }}
+                        className={element.className}
+                    >
+                        <img
+                            className={element.imgClassName}
+                            src={element.src}
+                            alt={element.alt}
+                        />
+                    </motion.div>
+                ))}
+            </div>
+        );
 };

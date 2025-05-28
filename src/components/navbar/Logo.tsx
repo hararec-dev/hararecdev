@@ -9,7 +9,7 @@ export const Logo: React.FC<{ className?: string }> = ({ className }) => {
     return !context
         ? null
         : (
-            <div className={`rounded-full overflow-hidden relative flex items-center transition-all duration-300 hover:scale-110 ${className}`}>
+            <div className={`rounded-full overflow-hidden flex items-center justify-center transition-all duration-300 hover:scale-110 ${className}`}>
                 <button onClick={() => window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
