@@ -11,7 +11,16 @@ export const SectionHeader: React.FC<ServicesHeaderProps> = ({ title, subtitle }
         transition={{ duration: 0.7, delay: 0.3 }}
     >
         <h2 className="text-3xl lg:text-5xl font-poppins font-semibold mb-3 text-background-dark dark:text-background-light tracking-tight drop-shadow-lg">
-            {title.split(' ')[0]}<GradientText> {title.split(' ')[1]}</GradientText>
+            {
+                title.split(' ').length <= 1
+                    ? <GradientText>{title}</GradientText>
+                    : (
+                        <>
+                            <GradientText>{title.split(' ')[0]} </GradientText>{title.split(' ')[1]}
+                        </>
+                    )
+            }
+
         </h2>
         <div className="mx-auto w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full mb-4" />
         <p className="text-lg md:text-xl px-6 text-left font-work text-background-dark dark:text-background-light opacity-80">{subtitle}</p>

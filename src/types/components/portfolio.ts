@@ -35,6 +35,7 @@ export interface FilterBarProps {
 export interface ProjectItem {
     id: string;
     title: string;
+    posterTitle: string;
     imageUrl?: string;
     videoUrl?: string;
     gifUrl?: string;
@@ -47,6 +48,7 @@ export interface ProjectItem {
     liveLink?: string;
     repoLink?: string;
     delay?: number;
+    isTextDark: boolean;
 }
 
 export interface ProjectCardProps {

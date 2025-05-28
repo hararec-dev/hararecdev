@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import type { CaseStudyModalProps, Visual } from "../../types";
 
@@ -40,6 +41,15 @@ const ProjectLink: React.FC<{ href: string; variant: 'primary' | 'secondary'; ch
 );
 
 export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ isOpen, onClose, project }) => {
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => { document.body.style.overflow = ''; };
+    }, [isOpen]);
+
     if (!isOpen || !project) return null;
 
     return (

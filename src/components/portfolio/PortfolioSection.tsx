@@ -7,21 +7,10 @@ import { SectionTitle } from '../shared';
 import type { ProjectItem } from '../../types';
 
 const allProjectsData: ProjectItem[] = [
-    /* {
-        id: '1',
-        title: 'App de Finanzas Personales',
-        gifUrl: 'https://media.giphy.com/media/Vh8pbGX3SGRwFDh3V0/giphy.gif', // Ejemplo GIF
-        type: 'app',
-        platform: 'web',
-        problem: 'Falta de una plataforma interactiva para cursos online.',
-        solution: 'Desarrollo de un LMS completo con React y Firebase.',
-        results: 'Más de 5,000 estudiantes inscritos en el primer año.',
-        visuals: [{ type: 'image', url: 'https://via.placeholder.com/600x400/FFB6C1/000000?text=LMS+Dashboard' }],
-        liveLink: '#',
-    }, */
     {
         id: '1',
-        title: 'App de Finanzas Personales',
+        title: 'Ledger A, una App de Finanzas Personales',
+        posterTitle: 'Ledger A: Finanzas Personales',
         type: 'app',
         imageUrl: '/images/ledger-a-logo.png',
         platform: 'android',
@@ -35,6 +24,7 @@ const allProjectsData: ProjectItem[] = [
          }],
         repoLink: 'https://github.com/hararec-dev/ledger-a',
         liveLink: '',
+        isTextDark: true,
     },
 ];
 
@@ -67,7 +57,7 @@ export const PortfolioSection: React.FC = ({ }) => {
             viewport={{ amount: 0.1 }}
         >
             <SectionTitle
-                headerTitle='Mi Portafolio'
+                headerTitle='Portafolio'
                 headerSubtitle='Aquí es donde las ideas se convierten en soluciones. Quiero ayudarte a superar tus desafíos y alcanzar tus objetivos. Cada proyecto es una historia de colaboración, innovación y resultados tangibles.'
                 imageAlt='Mi Portafolio'
                 imageSrc={imageSrc}
