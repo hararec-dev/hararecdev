@@ -27,19 +27,19 @@ export const ContactForm: React.FC = () => {
     return state.succeeded
         ? (
             <motion.div
-                className="text-center py-5 w-full"
+                className="text-center py-5 w-full rounded-2xl font-poppins"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ amount: 0.3 }}
             >
-                <p className="font-work text-background-light">¡Gracias, nos pondremos en contacto contigo!</p>
+                <p className="font-open">¡Gracias, nos pondremos en contacto contigo!</p>
             </motion.div>
         )
         : (
             <motion.form
-                className="text-center p-5 w-full sm:px-0 flex flex-col justify-center font-work"
+                className="text-center p-5 w-full sm:px-0 flex flex-col justify-center font-poppins rounded-2xl"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
@@ -53,7 +53,7 @@ export const ContactForm: React.FC = () => {
                         name="email"
                         type="email"
                         placeholder="Tu Email *"
-                        className={`w-full rounded-full py-2 pl-5 bg-transparent border ${emailTouched && !email.trim() ? 'border-red-500' : 'border-foreground-light dark:bg-background-dark'} text-foreground-light`}
+                        className={`w-full rounded-full py-2 pl-5 bg-white/70 dark:bg-background-dark border ${emailTouched && !email.trim() ? 'border-red-500' : 'border-primary/30'} text-background-dark dark:text-background-light font-open shadow-sm focus:ring-2 focus:ring-primary/40 transition-all`}
                         value={email}
                         onChange={handleEmailChange}
                         onBlur={() => setEmailTouched(true)}
@@ -62,7 +62,7 @@ export const ContactForm: React.FC = () => {
                         transition={{ duration: 0.2 }}
                     />
                     {emailTouched && !email.trim() && (
-                        <p className="text-red-500 text-sm mt-1 text-left pl-5">El email es obligatorio</p>
+                        <p className="text-red-500 text-sm mt-1 text-left pl-5">El email es requerido</p>
                     )}
                     <ValidationError
                         prefix="Email"
@@ -76,7 +76,7 @@ export const ContactForm: React.FC = () => {
                         id="message"
                         name="message"
                         placeholder="Tu mensaje... *"
-                        className={`w-full rounded-full py-2 px-5 bg-transparent border ${messageTouched && !message.trim() ? 'border-red-500' : 'border-foreground-light dark:bg-background-dark'} text-foreground-light resize-none`}
+                        className={`w-full rounded-2xl py-2 px-5 bg-white/70 dark:bg-background-dark border ${messageTouched && !message.trim() ? 'border-red-500' : 'border-primary/30'} text-background-dark dark:text-background-light font-open shadow-sm focus:ring-2 focus:ring-primary/40 transition-all resize-none`}
                         style={{ minHeight: '42px', maxHeight: '80px' }}
                         value={message}
                         onChange={handleMessageChange}
@@ -86,7 +86,7 @@ export const ContactForm: React.FC = () => {
                         transition={{ duration: 0.2 }}
                     />
                     {messageTouched && !message.trim() && (
-                        <p className="text-red-500 text-sm mt-1 text-left pl-5">El mensaje es obligatorio</p>
+                        <p className="text-red-500 text-sm mt-1 text-left pl-5">El mensaje es requerido</p>
                     )}
                     <ValidationError
                         prefix="Mensaje"
@@ -99,7 +99,7 @@ export const ContactForm: React.FC = () => {
                     <motion.button
                         type="submit"
                         disabled={state.submitting || !isFormValid}
-                        className="w-full font-poppins font-medium px-5 py-2 rounded-full bg-gradient-to-r from-sky-300 via-sky-400 to-sky-500 dark:from-sky-600 dark:via-sky-700 dark:to-sky-800 hover:from-sky-500 hover:to-sky-700 dark:hover:from-sky-600 dark:hover:to-sky-900 dark:shadow-sky-700 transition-all duration-300 ease-in-out hover:scale-105 text-gray-900 dark:text-gray-50 border border-sky-500 dark:border-sky-800 disabled:opacity-70 disabled:cursor-not-allowed"
+                        className="w-full font-poppins font-semibold px-5 py-2 rounded-full bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-400 dark:from-sky-700 dark:via-blue-800 dark:to-cyan-700 hover:from-blue-600 hover:to-cyan-500 text-white shadow-lg border border-primary/20 transition-all duration-300 ease-in-out hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed focus:ring-4 ring-primary/40"
                         whileHover={{ scale: isFormValid ? 1.05 : 1 }}
                         whileTap={{ scale: isFormValid ? 0.95 : 1 }}
                         transition={{ duration: 0.2 }}

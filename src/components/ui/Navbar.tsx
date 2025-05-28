@@ -23,15 +23,15 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <div className="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
-                <div className="flex flex-row items-center justify-between py-6">
+            <div className="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-center md:flex-row">
+                <div className="flex flex-row items-center justify-between py-2">
                     <Logo />
                     <div className='flex justify-center gap-6 md:hidden'>
                         <ThemeToggleButton />
                         <MobileMenuButton onClick={() => setOpen(!open)} />
                     </div>
                 </div>
-                <NavLinks open={open} />
+                {open && <NavLinks />}
             </div>
         </motion.nav>
     );
