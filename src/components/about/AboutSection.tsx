@@ -3,10 +3,10 @@ import { motion } from 'motion/react';
 import { SummaryText } from './SummaryText';
 import { ThemeContext } from '../../context';
 import { SectionTitle } from '../shared';
-import type { MethodologyItem, ProfileData } from '../../types';
+import type { ProfileData } from '../../types';
 
 const PROFILE_DATA: ProfileData = {
-    summary: "Entenderé tus necesidades para ofrecer soluciones de alto impacto. Priorizo la calidad, la comunicación constante y la resolución proactiva de problemas, buscando ser tu socio tecnológico y superar siempre tus expectativas.",
+    summary: "Mi experiencia prueba que entenderé tus necesidades para ofrecer soluciones optimas en tu negocio. Priorizo la calidad, la comunicación constante y la resolución proactiva de problemas, buscando ser tu socio tecnológico y superar siempre tus expectativas.",
     experience: [
         "Desarrollador Full-Stack en MAS SERVICIOS México, 2023 - 2024.",
         "Desarrollador Junior en Indra Sistemas México, S.A. De C.V. (2021)"
@@ -17,12 +17,6 @@ const PROFILE_DATA: ProfileData = {
     ],
     cvUrl: "/pdf/curriculum-hararec.pdf"
 };
-
-const methodologyItems: MethodologyItem[] = [
-    { id: 1, text: 'Comunicación clara y transparente' },
-    { id: 2, text: 'Entrega rápida y cumplimiento de plazos' },
-    { id: 3, text: 'Soluciones personalizadas y adaptadas al presupuesto' },
-];
 
 export const AboutSection: React.FC = () => {
     const themeContext = useContext(ThemeContext);
@@ -42,12 +36,12 @@ export const AboutSection: React.FC = () => {
         >
             <SectionTitle
                 headerTitle='Sobre mí'
-                headerSubtitle='¡Hola! Soy Hararec, un desarrollador freelance con más de 3 años de experiencia, que AMA transformar ideas en Apps móviles y APIs robustas.'
+                headerSubtitle='¡Hola! Soy Hararec, un desarrollador Freelancer y también profesor de Matemáticas, con más de 3 años de experiencia en el mundo de la tecnología.'
                 imageAlt='Sobre mí'
                 imageSrc={imageSrc}
-                methodologyItems={methodologyItems}
-                methodologyTitle='Mi enfoque es:'
-                hasMethodology
+                methodologyItems={[]}
+                methodologyTitle=''
+                hasMethodology={false}
             />
             <SummaryText
                 summary={PROFILE_DATA.summary}

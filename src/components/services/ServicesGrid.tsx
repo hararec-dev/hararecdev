@@ -12,15 +12,15 @@ const services: ServiceItem[] = [
     },
     {
         icons: ['globe', 'hdd-rack'],
-        title: 'APIs RESTful',
-        description: '¿Buscas integrar sistemas? Te ofrezco automatización de procesos, conexión con servicios externos y manejo de datos en la nube.',
+        title: 'Integración de Sistemas',
+        description: '¿Necesitas integrar tus sistemas? Automatizo tus procesos con APIs RESTFul, conecto servicios externos y gestiono datos en la nube.',
         benefits: ['Estandares de seguridad OWASP', 'Escalabilidad y Optimización', 'Documentación clara', ],
         delay: 0.4,
     },
     {
         icons: ['openai', 'anthropic'],
         title: 'Integración con AI',
-        description: 'La inteligencia artificial es el futuro. Te ofrezco integración con modelos para mejorar la experiencia de tus clientes.',
+        description: 'La inteligencia artificial es el futuro. Te ofrezco su integración para mejorar la experiencia de tus clientes.',
         benefits: ['Asistentes de AI', 'Automatización inteligente', 'Análisis predictivo'],
         delay: 0.5,
       },

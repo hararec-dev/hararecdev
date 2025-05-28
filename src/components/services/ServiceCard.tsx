@@ -22,7 +22,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ icons, title, descript
         <h3 className="font-bold font-poppins text-2xl mb-2 text-primary dark:text-cyan-300 tracking-tight drop-shadow-sm">
             {title}
         </h3>
-        <p className="text-background-dark font-open dark:text-background-light mb-4 text-base opacity-90">
+        <p className="text-left text-background-dark font-open dark:text-background-light mb-4 text-base opacity-90">
             {description}
         </p>
         <ul className="text-left font-work text-sm text-background-dark dark:text-background-light list-disc list-inside space-y-1">

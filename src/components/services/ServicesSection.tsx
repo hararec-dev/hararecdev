@@ -7,8 +7,9 @@ import { SectionTitle } from '../shared';
 import type { MethodologyItem } from '../../types';
 
 const methodologyItems: MethodologyItem[] = [
-    { id: 1, text: 'Comunicación y transparencia' },
-    { id: 2, text: 'Enfoque ágil y entregas iterativas' },
+    { id: 1, text: 'Comunicación clara y transparente' },
+    { id: 2, text: 'Entregas iterativas y cumplimiento de plazos' },
+    { id: 3, text: 'Soluciones 100% personalizadas y adaptadas al presupuesto' }
 ];
 
 export const ServicesSection: React.FC = () => {
@@ -28,10 +29,10 @@ export const ServicesSection: React.FC = () => {
             transition={{ duration: 0.5 }}
         >
             <SectionTitle
-                headerTitle='Mis Servicios'
-                headerSubtitle='Me especializo en aplicaciones móviles personalizadas y APIs robustas que impulsan tu negocio y resuelven tus problemas para entregar valor real.'
+                headerTitle='Servicios'
+                headerSubtitle='Me especializo en apps móviles personalizadas e integración de sistemas (APIs) para impulsar tu negocio y resolver tus problemas, entregando valor real.'
                 methodologyItems={methodologyItems}
-                methodologyTitle='Mi enfoque es:'
+                methodologyTitle='Enfoque:'
                 imageAlt='Mis Servicios'
                 imageSrc={imageSrc}
             />
