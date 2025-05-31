@@ -11,15 +11,16 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
     imageSrc,
     imageAlt,
     hasMethodology = true,
+    roundedImage = false,
 }) => {
     return (
         <header>
-            <div className="hidden w-full md:flex md:flex-row md:items-center gap-8 justify-center">
+            <div className={`${roundedImage ? 'gap-0' : 'gap-8'} hidden w-full md:flex md:flex-row md:items-center justify-center`}>
                 <div className="w-full md:w-3/5 lg:w-2/5 flex justify-center md:justify-start">
                     <motion.img
                         src={imageSrc}
                         alt={imageAlt}
-                        className="w-full h-auto drop-shadow-xl rounded-2xl"
+                        className={`${roundedImage ? 'rounded-full w-4/5' : 'rounded-2xl w-full'} h-auto drop-shadow-xl`}
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.7 }}
@@ -43,11 +44,11 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
                     title={headerTitle}
                     subtitle={headerSubtitle}
                 />
-                <div className="w-full md:w-1/3 lg:w-2/5 flex justify-center mt-2 mb-8">
+                <div className={`${roundedImage ? 'w-4/5' : 'w-full'}  md:w-1/3 lg:w-2/5 flex justify-center mt-2 mb-8`}>
                     <motion.img
                         src={imageSrc}
                         alt="Digital Nomad Illustration"
-                        className="w-full h-auto drop-shadow-xl rounded-2xl"
+                        className={`${roundedImage ? 'rounded-full' : 'rounded-2xl'} w-full h-auto drop-shadow-xl`}
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.7 }}

@@ -21,6 +21,7 @@ export interface SectionTitleProps {
     methodologyItems: MethodologyItem[];
     methodologyTitle: string;
     hasMethodology?: boolean;
+    roundedImage?: boolean;
 }
 
 export interface CTAProps {

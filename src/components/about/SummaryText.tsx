@@ -4,7 +4,7 @@ import type { AboutSection, SummaryTextProps } from "../../types";
 export const SummaryText: React.FC<SummaryTextProps> = ({ summary, education, experience, cvUrl }) => {
     const sections: AboutSection[] = [
         {
-            title: "Experiencia",
+            title: "Experiencia Corporativa",
             items: experience,
             keyPrefix: "exp"
         },
@@ -24,7 +24,7 @@ export const SummaryText: React.FC<SummaryTextProps> = ({ summary, education, ex
             viewport={{ amount: 0.3 }}
         >
             <motion.p
-                className="text-lg text-left mb-6 text-background-dark dark:text-background-light font-open opacity-90"
+                className="text-lg text-left text-background-dark dark:text-background-light font-open opacity-90"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}

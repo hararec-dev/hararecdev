@@ -6,3 +6,4 @@ export * from './SectionHeader';
 export * from './SectionMethodology';
 export * from './SectionTitle';
 export * from './SocialLinkButtons';
+export * from './WhatsAppButton';

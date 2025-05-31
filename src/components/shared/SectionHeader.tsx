@@ -22,7 +22,7 @@ export const SectionHeader: React.FC<ServicesHeaderProps> = ({ title, subtitle }
             }
 
         </h2>
-        <div className="mx-auto w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full mb-4" />
+        <div className="w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full mb-4" />
         <p className="text-lg md:text-xl px-6 text-left font-work text-background-dark dark:text-background-light opacity-80">{subtitle}</p>
     </motion.header>
 );

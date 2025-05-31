@@ -1,4 +1,4 @@
-import { BackgroundCanvas, Footer, Hero, Main, Navbar } from './components';
+import { BackgroundCanvas, Footer, Hero, Main, Navbar, WhatsAppButton } from './components';
 import { ThemeProvider } from './context';
 
 export const App = () => {
@@ -9,6 +9,7 @@ export const App = () => {
       <Hero />
       <Main />
       <Footer />
+      <WhatsAppButton />
     </ThemeProvider>
   )
 }

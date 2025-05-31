@@ -81,7 +81,7 @@ Agradezco a todos aquellos que contribuyen al desarrollo de este proyecto.
 **Créditos y recursos utilizados:**
 
 - **Logos de Tecnologías:** [svgrepo](https://www.svgrepo.com/) y [worldvectorlogo](https://worldvectorlogo.com/)
-- **Imagenes personalizadas:** [UnDrow](https://undraw.co/)
+- **Imagenes personalizadas:** [unsplash](https://unsplash.com/) y [pexels](https://www.pexels.com/)
 - **Inspiración de UI:** [Proyecto "skilline-landing-page" de "mhaecal"](https://github.com/mhaecal/skilline-landing-page)
 
 Hecho con ❤️ por HararecDev.

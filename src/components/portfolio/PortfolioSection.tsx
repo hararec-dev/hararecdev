@@ -1,26 +1,26 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ProjectGrid } from './ProjectGrid';
 import { CaseStudyModal } from './CaseStudyModal';
-import { ThemeContext } from '../../context';
 import { SectionTitle } from '../shared';
-import type { ProjectItem } from '../../types';
+import imageSrc from "/images/william-hook-apps-unsplash.jpg";
+import type { MethodologyItem, ProjectItem } from '../../types';
 
 const allProjectsData: ProjectItem[] = [
     {
         id: '1',
         title: 'Ledger A, una App de Finanzas Personales',
-        posterTitle: 'Ledger A: Finanzas Personales',
+        posterTitle: 'Ledger A - App de Finanzas Personales',
         type: 'app',
-        imageUrl: '/images/ledger-a-logo.png',
+        imageUrl: '/images/logo-ledger-a.png',
         platform: 'android',
-        problem: 'Crear una App de finanzas personales con funciones abanzadas en la capa gratuita.',
+        challenge: 'Crear una App de finanzas personales con funciones abanzadas en la capa gratuita.',
         solution: 'Ledger-A proporciona gestión financiera, reportes en Excel y gráficos.',
         results: 'El proyecto está en proceso de desarrollo.',
         visuals: [{ 
             type: 'iframe',
             url: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7314190105211002880?compact=1',
-            alt: 'Video de LinkedIn',
+            alt: 'Video de LinkedIn - Ledger A: Finanzas Personales',
          }],
         repoLink: 'https://github.com/hararec-dev/ledger-a',
         liveLink: '',
@@ -28,15 +28,16 @@ const allProjectsData: ProjectItem[] = [
     },
 ];
 
+const methodologyItems: MethodologyItem[] = [
+    {
+        id: 1,
+        text: 'Ledger A: App de Finanzas Personales',
+    },
+]
+
 export const PortfolioSection: React.FC = ({ }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
-    const themeContext = useContext(ThemeContext);
-
-    const imageSrc = themeContext?.theme === 'dark'
-        ? "/images/undraw_building-websites_k2zp-dark.svg"
-        : "/images/undraw_building-websites_k2zp-light.svg";
-
     const handleProjectClick = (project: ProjectItem) => {
         setSelectedProject(project);
         setIsModalOpen(true);
@@ -54,16 +55,16 @@ export const PortfolioSection: React.FC = ({ }) => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            viewport={{ amount: 0.1 }}
+            viewport={{ amount: 0 }}
         >
             <SectionTitle
                 headerTitle='Portafolio'
-                headerSubtitle='Aquí es donde las ideas se convierten en soluciones. Quiero ayudarte a superar tus desafíos y alcanzar tus objetivos. Cada proyecto es una historia de colaboración, innovación y resultados tangibles.'
-                imageAlt='Mi Portafolio'
+                headerSubtitle='Aquí puedes ver una muestra de cómo ayudo a negocios como el tuyo a alcanzar sus objetivos a través de soluciones web y móviles. Cada proyecto es una historia de colaboración, y de ideas convertidas en realidad.'
+                imageAlt='Portafolio'
                 imageSrc={imageSrc}
-                methodologyItems={[]}
-                methodologyTitle=''
-                hasMethodology={false}
+                methodologyItems={methodologyItems}
+                methodologyTitle='Proyectos'
+                hasMethodology
             />
             <ProjectGrid projects={allProjectsData} onProjectClick={handleProjectClick} />
             {selectedProject && (

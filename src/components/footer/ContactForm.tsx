@@ -27,14 +27,14 @@ export const ContactForm: React.FC = () => {
     return state.succeeded
         ? (
             <motion.div
-                className="text-center py-5 w-full rounded-2xl font-poppins"
+                className="text-center py-5 w-full rounded-2xl font-poppins text-background-dark dark:text-background-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ amount: 0.3 }}
             >
-                <p className="font-open">¡Gracias, nos pondremos en contacto contigo!</p>
+                <p className="font-open">¡Gracias, me pondré en contacto contigo!</p>
             </motion.div>
         )
         : (

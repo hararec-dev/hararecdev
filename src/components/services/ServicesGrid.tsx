@@ -4,26 +4,51 @@ import type { ServiceItem } from '../../types';
 
 const services: ServiceItem[] = [
     {
-        icons: ['android2', 'apple'],
-        title: 'Apps Móviles',
-        description: '¿Necesitas una App? Te ofrezco soluciones personalizadas para que tu negocio crezca en el ecosistema móvil.',
-        benefits: ['iOS & Android', 'UI/UX moderna'],
+        icons: [
+            'android2',
+            'apple'
+        ],
+        title: 'Aplicaciones Móviles',
+        description: '¿Sientes que podrías estar más cerca de tus clientes? Una app móvil bien diseñada te acerca a tu audiencia, crea lealtad y te diferencia del resto.',
+        benefits: [
+            'Canales venta y comunicación 24/7',
+            'Diseño intuitivo que atrae usuarios',
+            'Notificaciones push personalizables',
+            'Disponible para iOS y Android',
+            'Soporte y actualizaciones continuas'
+        ],
         delay: 0.3,
     },
     {
-        icons: ['globe', 'hdd-rack'],
-        title: 'Integración de Sistemas',
-        description: '¿Necesitas integrar tus sistemas? Automatizo tus procesos con APIs RESTFul, conecto servicios externos y gestiono datos en la nube.',
-        benefits: ['Estandares de seguridad OWASP', 'Escalabilidad y Optimización', 'Documentación clara', ],
+        icons: [
+            'globe',
+            'hdd-rack'
+        ],
+        title: 'Aplicaciones Web',
+        description: '¿Tu web no genera resultados o aún no tienes presencia online? Una web personalizada y optimizada para SEO impulsa tus ventas y refuerza tu imagen profesional en línea.',
+        benefits: [
+            'Interfaz amigable para usuarios',
+            'Cobros y formularios integrados',
+            'Adaptabilidad en todos los dispositivos',
+            'Datos y métricas en tiempo real',
+            'Tiempos de carga mínimos'
+        ],
         delay: 0.4,
     },
     {
-        icons: ['openai', 'anthropic'],
-        title: 'Integración con AI',
-        description: 'La inteligencia artificial es el futuro. Te ofrezco su integración para mejorar la experiencia de tus clientes.',
-        benefits: ['Asistentes de AI', 'Automatización inteligente', 'Análisis predictivo'],
+        icons: [
+            'anthropic',
+            'robot',
+        ],
+        title: 'Integración de Apps con Inteligencia Artificial',
+        description: 'Mientras otros ya aprovechan la IA, ¿tú aún no? Automatiza tareas y ofrece experiencias personalizadas. Integramos Inteligencia Artificial en tus apps para ayudarte a crecer.',
+        benefits: [
+            'Chatbots y otras soluciones de IA',
+            'Recomendadores personalizados',
+            'Fácil conexión con tus apps existentes'
+        ],
         delay: 0.5,
-      },
+    },
 ];
 
 export const ServicesGrid: React.FC = () => (
