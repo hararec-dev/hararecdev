@@ -15,12 +15,12 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
 }) => {
     return (
         <header>
-            <div className="hidden w-full md:flex md:flex-row md:items-center gap-8 justify-center">
+            <div className={`${roundedImage ? 'gap-0' : 'gap-8'} hidden w-full md:flex md:flex-row md:items-center justify-center`}>
                 <div className="w-full md:w-3/5 lg:w-2/5 flex justify-center md:justify-start">
                     <motion.img
                         src={imageSrc}
                         alt={imageAlt}
-                        className={`${roundedImage ? 'rounded-full' : 'rounded-2xl'} w-full h-auto drop-shadow-xl`}
+                        className={`${roundedImage ? 'rounded-full w-4/5' : 'rounded-2xl w-full'} h-auto drop-shadow-xl`}
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.7 }}

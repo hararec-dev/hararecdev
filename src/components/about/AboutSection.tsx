@@ -1,11 +1,11 @@
 import { motion } from 'motion/react';
 import { SummaryText } from './SummaryText';
 import { SectionTitle } from '../shared';
-import imageSrc from '/images/foto_perfil_alta_def2.png';
+import imageSrc from '/images/selfie.png';
 import type { ProfileData } from '../../types';
 
 const PROFILE_DATA: ProfileData = {
-    summary: "Mi experiencia prueba que entenderé tus necesidades para ofrecer soluciones optimas en tu negocio. Priorizo la calidad, la comunicación constante y la resolución proactiva de problemas, buscando ser tu socio tecnológico y superar siempre tus expectativas.",
+    summary: "",
     experience: [
         "Desarrollador Full-Stack en MAS SERVICIOS México, 2023 - 2024.",
         "Desarrollador Junior en Indra Sistemas México, S.A. De C.V. (2021)"
@@ -30,7 +30,7 @@ export const AboutSection: React.FC = () => {
         >
             <SectionTitle
                 headerTitle='Sobre mí'
-                headerSubtitle='¡Hola! Soy Hararec, un desarrollador Freelancer y también profesor de Matemáticas, con más de 3 años de experiencia en el mundo de la tecnología.'
+                headerSubtitle='¡Hola! Soy Hararec, desarrollador con +3 años creando apps y webs. Mi misión es simple: Ayudarte a digitalizar tu negocio sin que la tecnología sea un dolor de cabeza. Trabajo contigo en español, en tu horario y desde CDMX. No soy una agencia costosa ni un freelancer distante, soy tu socio de confianza.'
                 imageAlt='Sobre mí'
                 imageSrc={imageSrc}
                 methodologyItems={[]}

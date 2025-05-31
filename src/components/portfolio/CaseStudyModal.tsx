@@ -62,7 +62,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ isOpen, onClose,
             transition={{ duration: 0.5 }}
         >
             <motion.div
-                className="bg-gradient-to-br from-white via-sky-50 to-sky-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-2xl shadow-2xl border border-sky-200 dark:border-sky-800 max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 relative transform transition-all duration-300 ease-in-out scale-95 opacity-0 animate-modalShow"
+                className="bg-gradient-to-br from-white via-sky-50 to-sky-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-2xl shadow-2xl border border-sky-200 dark:border-sky-800 max-w-3xl w-full max-h-[90vh] overflow-y-scroll p-6 md:p-8 relative transform transition-all duration-300 ease-in-out scale-95 opacity-0 animate-modalShow"
                 onClick={(e) => e.stopPropagation()}
                 initial={{ scale: 0.7, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -80,9 +80,9 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ isOpen, onClose,
                     {project.title}
                 </h2>
 
-                <ProjectSection title="Problema" content={project.problem} />
-                <ProjectSection title="Solución" content={project.solution} />
-                <ProjectSection title="Resultados" content={project.results} />
+                <ProjectSection title="Desafío:" content={project.challenge} />
+                <ProjectSection title="Solución entregada:" content={project.solution} />
+                <ProjectSection title="Resultados:" content={project.results} />
 
                 {project.visuals?.length > 0 && (
                     <div className="mb-6">

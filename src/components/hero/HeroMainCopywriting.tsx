@@ -18,7 +18,7 @@ export const HeroMainCopywriting: React.FC = () => {
 
     return (
         <div className="flex flex-col w-full lg:w-1/2 justify-center items-center">
-            <div className="mx-auto text-start md:text-center text-gray-800 dark:text-gray-200">
+            <div className="mx-auto text-start text-gray-800 dark:text-gray-200">
                 <motion.div
                     variants={fadeInVariants}
                     initial={{ opacity: 0, x: -50 }}
@@ -46,7 +46,7 @@ export const HeroMainCopywriting: React.FC = () => {
                     transition={{ duration: 0.5, delay: 0.7 }}
                 >
                     <p className="font-work mt-6 lg:mb-6 text-lg md:text-xl text-start px-5 md:px-0">
-                        ¿Permitirás que la competencia te deje atrás? Impulsa tu negocio con apps móviles, APIs e inteligencia artificial para destacar y crecer de manera sencilla y sin costos ocultos.
+                        No dejes que la competencia te supere. Digitaliza tu negocio para destacar y crecer de manera sencilla y sin costos ocultos.
                     </p>
                 </motion.div>
             </div>

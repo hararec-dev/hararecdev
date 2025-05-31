@@ -3,24 +3,24 @@ import { motion } from 'framer-motion';
 import { ProjectGrid } from './ProjectGrid';
 import { CaseStudyModal } from './CaseStudyModal';
 import { SectionTitle } from '../shared';
-import imageSrc from "/images/william-hook-9e9PD9blAto-unsplash.jpg";
+import imageSrc from "/images/william-hook-apps-unsplash.jpg";
 import type { MethodologyItem, ProjectItem } from '../../types';
 
 const allProjectsData: ProjectItem[] = [
     {
         id: '1',
         title: 'Ledger A, una App de Finanzas Personales',
-        posterTitle: 'Ledger A: Finanzas Personales',
+        posterTitle: 'Ledger A - App de Finanzas Personales',
         type: 'app',
-        imageUrl: '/images/ledger-a-logo.png',
+        imageUrl: '/images/logo-ledger-a.png',
         platform: 'android',
-        problem: 'Crear una App de finanzas personales con funciones abanzadas en la capa gratuita.',
+        challenge: 'Crear una App de finanzas personales con funciones abanzadas en la capa gratuita.',
         solution: 'Ledger-A proporciona gestión financiera, reportes en Excel y gráficos.',
         results: 'El proyecto está en proceso de desarrollo.',
         visuals: [{ 
             type: 'iframe',
             url: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7314190105211002880?compact=1',
-            alt: 'Video de LinkedIn',
+            alt: 'Video de LinkedIn - Ledger A: Finanzas Personales',
          }],
         repoLink: 'https://github.com/hararec-dev/ledger-a',
         liveLink: '',
@@ -59,8 +59,8 @@ export const PortfolioSection: React.FC = ({ }) => {
         >
             <SectionTitle
                 headerTitle='Portafolio'
-                headerSubtitle='Aquí es donde las ideas se convierten en soluciones. Quiero ayudarte a superar tus desafíos y alcanzar tus objetivos. Cada proyecto es una historia de colaboración, innovación y resultados tangibles.'
-                imageAlt='Mi Portafolio'
+                headerSubtitle='Aquí puedes ver una muestra de cómo ayudo a negocios como el tuyo a alcanzar sus objetivos a través de soluciones web y móviles. Cada proyecto es una historia de colaboración, y de ideas convertidas en realidad.'
+                imageAlt='Portafolio'
                 imageSrc={imageSrc}
                 methodologyItems={methodologyItems}
                 methodologyTitle='Proyectos'

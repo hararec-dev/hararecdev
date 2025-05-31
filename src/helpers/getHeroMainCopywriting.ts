@@ -7,7 +7,7 @@ export const getHeroMainCopywriting = async (): Promise<MainCopywritingText> => 
         { text: " ", font: "sans-serif" },
         { text: "Móviles", font: "handwriting" },
         { text: " y ", font: "sans-serif" },
-        { text: "APIs", font: "handwriting" },
-        { text: " que generan resultados", font: "sans-serif" },
+        { text: "Web", font: "handwriting" },
+        { text: " 100% a tu medida", font: "sans-serif" },
     ];
 };

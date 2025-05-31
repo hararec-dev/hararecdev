@@ -54,7 +54,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails
             )}
 
             <div className="absolute inset-0 bg-opacity-60 transition-all duration-300 flex flex-col items-center justify-center p-4 hover:bg-background-dark/20">
-                <h3 className={`${project.isTextDark ? 'text-background-dark' : 'text-background-light'} backdrop-filter backdrop-blur-md rounded-2xl text-2xl font-bold font-poppins mb-8 opacity-100 transition-opacity duration-300 delay-100 text-center drop-shadow-lg py-2 px-4`}>
+                <h3 className={`${project.isTextDark ? 'text-background-dark' : 'text-background-light'} backdrop-filter backdrop-blur-md rounded-2xl text-xl font-bold font-poppins mb-8 opacity-100 transition-opacity duration-300 delay-100 text-center drop-shadow-lg py-2 px-4`}>
                     {project.posterTitle}
                 </h3>
                 <button

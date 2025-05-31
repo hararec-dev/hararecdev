@@ -6,9 +6,9 @@ import imageSrc from '/images/pexels-mikhail-nilov-7989239.jpg';
 import type { MethodologyItem } from '../../types';
 
 const methodologyItems: MethodologyItem[] = [
-    { id: 1, text: 'Comunicación clara y transparente' },
+    { id: 1, text: 'Comunicación clara, transparente y disponible' },
     { id: 2, text: 'Entregas iterativas y cumplimiento de plazos' },
-    { id: 3, text: 'Soluciones 100% personalizadas y adaptadas al presupuesto' }
+    { id: 3, text: 'Soluciones adaptadas al presupuesto' }
 ];
 
 export const ServicesSection: React.FC = () => {
@@ -23,9 +23,9 @@ export const ServicesSection: React.FC = () => {
         >
             <SectionTitle
                 headerTitle='Servicios'
-                headerSubtitle='Me especializo en apps móviles personalizadas e integración de sistemas (APIs) para impulsar tu negocio y resolver tus problemas, entregando valor real.'
+                headerSubtitle='¿Para quién? Emprendedores, Startups y PYMEs que quieren lanzar o validar su producto rápido, sin complicarse con lo técnico. Cada negocio es distinto, y por eso desarrollo apps móviles y web personalizadas, pensadas para poner tu marca justo en el bolsillo de tus clientes.'
                 methodologyItems={methodologyItems}
-                methodologyTitle='Enfoque:'
+                methodologyTitle='¡Seré tu socio y aliado técnico!'
                 imageAlt='Mis Servicios'
                 imageSrc={imageSrc}
             />

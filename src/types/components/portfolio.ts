@@ -6,7 +6,7 @@ export interface Visual {
 
 export interface Project {
     title: string;
-    problem: string;
+    challenge: string;
     solution: string;
     results: string;
     visuals: Visual[];
@@ -41,7 +41,7 @@ export interface ProjectItem {
     gifUrl?: string;
     type: 'app' | 'api';
     platform: 'ios' | 'android' | 'web';
-    problem: string;
+    challenge: string;
     solution: string;
     results: string;
     visuals: { type: 'image' | 'video' | 'iframe'; url: string; alt?: string }[];
