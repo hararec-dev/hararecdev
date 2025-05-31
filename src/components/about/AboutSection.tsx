@@ -1,8 +1,7 @@
-import { useContext } from 'react';
 import { motion } from 'motion/react';
 import { SummaryText } from './SummaryText';
-import { ThemeContext } from '../../context';
 import { SectionTitle } from '../shared';
+import imageSrc from '/images/foto_perfil_alta_def2.png';
 import type { ProfileData } from '../../types';
 
 const PROFILE_DATA: ProfileData = {
@@ -19,11 +18,6 @@ const PROFILE_DATA: ProfileData = {
 };
 
 export const AboutSection: React.FC = () => {
-    const themeContext = useContext(ThemeContext);
-    const currentTheme = themeContext?.theme || 'light';
-    const imageSrc = currentTheme === 'dark'
-        ? '/images/undraw_feeling-proud_tdos-dark.svg'
-        : '/images/undraw_feeling-proud_tdos-light.svg';
 
     return (
         <motion.section
@@ -31,7 +25,7 @@ export const AboutSection: React.FC = () => {
             className="w-full py-14 px-4 shadow-[0_-35px_60px_-15px_rgba(0,0,0,0.3)] shadow-sky-300 dark:shadow-sky-700 bg-gradient-to-br from-secondary-light/70 to-background-light/40 dark:from-secondary-dark/90 dark:to-background-dark/70 bg-opacity-10 border dark:border-primary/10 border-white"
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ amount: 0.1 }}
+            viewport={{ amount: 0 }}
             transition={{ duration: 0.5 }}
         >
             <SectionTitle
@@ -42,6 +36,7 @@ export const AboutSection: React.FC = () => {
                 methodologyItems={[]}
                 methodologyTitle=''
                 hasMethodology={false}
+                roundedImage
             />
             <SummaryText
                 summary={PROFILE_DATA.summary}

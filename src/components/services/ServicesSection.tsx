@@ -1,9 +1,8 @@
-import { useContext } from 'react';
 import { motion } from 'motion/react';
 import { ServicesGrid } from './ServicesGrid';
-import { ThemeContext } from '../../context/ThemeContext';
 import { CarouselOfTechnologies } from './CarouselOfTechnologies';
 import { SectionTitle } from '../shared';
+import imageSrc from '/images/pexels-mikhail-nilov-7989239.jpg';
 import type { MethodologyItem } from '../../types';
 
 const methodologyItems: MethodologyItem[] = [
@@ -13,19 +12,13 @@ const methodologyItems: MethodologyItem[] = [
 ];
 
 export const ServicesSection: React.FC = () => {
-    const themeCtx = useContext(ThemeContext);
-    const theme = themeCtx?.theme || 'light';
-    const imageSrc = theme === 'dark'
-        ? '/images/undraw_working_n9u0-dark.svg'
-        : '/images/undraw_working_n9u0-light.svg';
-
     return (
         <motion.section
             id="services"
             className="w-full py-14 px-4 shadow-2xl shadow-sky-300 dark:shadow-sky-700 bg-gradient-to-br from-secondary-light/40 to-background-light dark:from-secondary-dark/60 dark:to-background-dark bg-opacity-10 border dark:border-primary/10 border-white"
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ amount: 0.1 }}
+            viewport={{ amount: 0 }}
             transition={{ duration: 0.5 }}
         >
             <SectionTitle
