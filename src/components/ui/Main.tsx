@@ -1,6 +1,6 @@
-import { AboutSection } from "../about";
-import { PortfolioSection } from "../portfolio";
-import { ServicesSection } from "../services";
+import { AboutSection } from "@components/about";
+import { PortfolioSection } from "@components/portfolio";
+import { ServicesSection } from "@components/services";
 
 export const Main: React.FC = ({ }) => {
     return (

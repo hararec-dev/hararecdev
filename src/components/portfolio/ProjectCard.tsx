@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import type { ProjectCardProps } from "../../types";
+import type { ProjectCardProps } from "@types";
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails }) => {
     const [isHovered, setIsHovered] = useState(false);

@@ -1,6 +1,6 @@
 import { ProjectCard } from './ProjectCard';
 import { motion } from 'framer-motion';
-import type { ProjectGridProps } from '../../types';
+import type { ProjectGridProps } from '@types';
 
 
 export const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, onProjectClick }) => {

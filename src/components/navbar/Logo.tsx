@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ThemeContext } from '../../context';
+import { ThemeContext } from '@context';
 import logoDark from '/images/logo_dark.png';
 import logoLight from '/images/logo_light.png';
 

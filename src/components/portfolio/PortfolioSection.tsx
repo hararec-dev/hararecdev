@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ProjectGrid } from './ProjectGrid';
 import { CaseStudyModal } from './CaseStudyModal';
-import { SectionTitle } from '../shared';
+import { SectionTitle } from '@components/shared';
 import imageSrc from "/images/william-hook-apps-unsplash.jpg";
-import type { MethodologyItem, ProjectItem } from '../../types';
+import type { MethodologyItem, ProjectItem } from '@types';
 
 const allProjectsData: ProjectItem[] = [
     {

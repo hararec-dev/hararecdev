@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import type { MobileMenuButtonProps } from '../../types';
-import { BootstrapIcon } from '../shared/BootstrapIcon';
+import type { MobileMenuButtonProps } from '@types';
+import { BootstrapIcon } from '@components/shared/BootstrapIcon';
 
 export const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ onClick }) => {
     const [open, setOpen] = useState(false);

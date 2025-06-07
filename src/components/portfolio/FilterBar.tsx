@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import type { FilterBarProps, ProjectPlatform, ProjectType } from "../../types";
+import type { FilterBarProps, ProjectPlatform, ProjectType } from "@types";
 
 export const FilterBar: React.FC<FilterBarProps> = ({
     currentType,

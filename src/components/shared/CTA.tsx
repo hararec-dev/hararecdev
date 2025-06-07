@@ -1,4 +1,4 @@
-import type { CTAProps } from "../../types";
+import type { CTAProps } from "@types";
 
 export const CTA: React.FC<CTAProps> = ({
     primaryLabel = "Agendar llamada",

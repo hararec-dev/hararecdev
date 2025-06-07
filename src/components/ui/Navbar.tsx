@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Logo, MobileMenuButton, NavLinks, ThemeToggleButton } from '../navbar';
+import { Logo, MobileMenuButton, NavLinks, ThemeToggleButton } from '@components/navbar';
 
 export const Navbar: React.FC = () => {
     const [open, setOpen] = useState(false);

@@ -1,6 +1,6 @@
-import { BootstrapIcon } from '../shared';
+import { BootstrapIcon } from '@components/shared';
 import { ServiceCard } from './ServiceCard';
-import type { ServiceItem } from '../../types';
+import type { ServiceItem } from '@types';
 
 const services: ServiceItem[] = [
     {

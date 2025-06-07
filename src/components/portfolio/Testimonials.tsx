@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import type { TestimonialItem, TestimonialsProps } from "../../types";
+import type { TestimonialItem, TestimonialsProps } from "@types";
 
 export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, displayMode = 'grid' }) => {
     if (!testimonials || testimonials.length === 0) {

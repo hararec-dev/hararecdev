@@ -1,4 +1,4 @@
-import { Carousel } from '../shared';
+import { Carousel } from '@components/shared';
 import { motion } from 'framer-motion';
 import reactNativeLight from '/images/reactjs-svgrepo-light.svg';
 import reactNativeDark from '/images/reactjs-svgrepo-dark.svg';
@@ -13,7 +13,7 @@ import mongo from '/images/mongo-svgrepo.svg';
 import awsDark from '/images/aws-svgrepo-dark.svg';
 import awsLight from '/images/aws-svgrepo-light.svg';
 import linux from '/images/tux.svg';
-import type { CarouselItem } from '../../types';
+import type { CarouselItem } from '@types';
 
 export const CarouselOfTechnologies: React.FC = () => {
     const brands: CarouselItem[] = [

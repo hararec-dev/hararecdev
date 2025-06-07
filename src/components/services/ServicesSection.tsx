@@ -1,9 +1,9 @@
 import { motion } from 'motion/react';
 import { ServicesGrid } from './ServicesGrid';
 import { CarouselOfTechnologies } from './CarouselOfTechnologies';
-import { SectionTitle } from '../shared';
+import { SectionTitle } from '@components/shared';
 import imageSrc from '/images/pexels-mikhail-nilov-7989239.jpg';
-import type { MethodologyItem } from '../../types';
+import type { MethodologyItem } from '@types';
 
 const methodologyItems: MethodologyItem[] = [
     { id: 1, text: 'Comunicación clara, transparente y disponible' },

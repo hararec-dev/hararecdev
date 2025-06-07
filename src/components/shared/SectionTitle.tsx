@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { SectionHeader } from "./SectionHeader";
 import { SectionMethodology } from "./SectionMethodology";
-import type { SectionTitleProps } from "../../types";
+import type { SectionTitleProps } from "@types";
 
 export const SectionTitle: React.FC<SectionTitleProps> = ({
     headerTitle,

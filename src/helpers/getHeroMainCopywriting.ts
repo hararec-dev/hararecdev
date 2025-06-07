@@ -1,4 +1,4 @@
-import type { MainCopywritingText } from "../types";
+import type { MainCopywritingText } from "@types";
 
 export const getHeroMainCopywriting = async (): Promise<MainCopywritingText> => {
     return [

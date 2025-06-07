@@ -1,4 +1,4 @@
-import { HeroMainCopywriting, HeroImage } from "../hero";
+import { HeroMainCopywriting, HeroImage } from "@components/hero";
 
 export const Hero: React.FC = ({ }) => {
     return (

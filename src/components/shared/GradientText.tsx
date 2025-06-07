@@ -1,4 +1,4 @@
-import type { GradientTextProps } from "../../types";
+import type { GradientTextProps } from "@types";
 
 export const GradientText: React.FC<GradientTextProps> = ({ children, className = "" }) => {
     return (

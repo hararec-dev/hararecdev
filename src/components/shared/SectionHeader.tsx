@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { GradientText } from './GradientText';
-import type { ServicesHeaderProps } from '../../types';
+import type { ServicesHeaderProps } from '@types';
 
 export const SectionHeader: React.FC<ServicesHeaderProps> = ({ title, subtitle }) => (
     <motion.header

@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { motion } from 'motion/react';
-import { FooterCopyright, ContactForm } from '../footer';
+import { FooterCopyright, ContactForm } from '@components/footer';
 import contactDark from '/images/erica-steeves-G_lwAp0TF38-unsplash-rb.jpg';
 import contactLight from '/images/erica-steeves-G_lwAp0TF38-unsplash-rb.jpg';
-import { ThemeContext } from '../../context';
+import { ThemeContext } from '@context';
 
 export const Footer: React.FC = () => {
     const context = useContext(ThemeContext);

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import type { MethodologyProps } from "../../types";
+import type { MethodologyProps } from "@types";
 
 export const SectionMethodology: React.FC<MethodologyProps> = ({ items, title }) => (
     <motion.section

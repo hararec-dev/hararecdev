@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../context";
-import type { CarouselProps } from "../../types";
+import { ThemeContext } from "@context";
+import type { CarouselProps } from "@types";
 
 const VISIBLE_ITEMS_DESKTOP = 10;
 const VISIBLE_ITEMS_TABLET = 5;

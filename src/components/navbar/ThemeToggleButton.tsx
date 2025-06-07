@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { ThemeContext } from '../../context';
-import { BootstrapIcon } from '../shared/BootstrapIcon';
+import { ThemeContext } from '@context';
+import { BootstrapIcon } from '@components/shared/BootstrapIcon';
 
 export const ThemeToggleButton: React.FC<{ className?: string }> = ({ className }) => {
     const context = useContext(ThemeContext);

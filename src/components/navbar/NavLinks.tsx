@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggleButton } from './ThemeToggleButton';
-import { SocialLinkButtons } from '../shared';
-import type { NavLink } from '../../types';
+import { SocialLinkButtons } from '@components/shared';
+import type { NavLink } from '@types';
 
 const navLinks: NavLink[] = [
     {

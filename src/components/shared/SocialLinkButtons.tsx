@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { getSocialLinks } from "../../helpers";
+import { getSocialLinks } from "@helpers";
 import { BootstrapIcon } from "./BootstrapIcon";
 
 export const SocialLinkButtons = () => {

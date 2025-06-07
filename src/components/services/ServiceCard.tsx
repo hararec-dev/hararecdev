@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
-import { GradientText } from "../shared";
-import type { ServiceCardProps } from "../../types";
+import { GradientText } from "@components/shared";
+import type { ServiceCardProps } from "@types";
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ icons, title, description, benefits, delay }) => (
     <motion.div

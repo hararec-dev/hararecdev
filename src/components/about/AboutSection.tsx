@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
 import { SummaryText } from './SummaryText';
-import { SectionTitle } from '../shared';
+import { SectionTitle } from '@components/shared';
 import imageSrc from '/images/selfie.png';
-import type { ProfileData } from '../../types';
+import type { ProfileData } from '@types';
 
 const PROFILE_DATA: ProfileData = {
     summary: "",

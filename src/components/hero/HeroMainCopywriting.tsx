@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { getHeroMainCopywriting } from '../../helpers';
-import { GradientText } from '../shared';
-import type { CopywritingItem } from '../../types';
+import { getHeroMainCopywriting } from '@helpers';
+import { GradientText } from '@components/shared';
+import type { CopywritingItem } from '@types';
 
 const fadeInVariants = {
     hidden: { opacity: 0 },

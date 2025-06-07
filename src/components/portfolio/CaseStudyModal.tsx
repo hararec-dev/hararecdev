@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import type { CaseStudyModalProps, Visual } from "../../types";
+import type { CaseStudyModalProps, Visual } from "@types";
 
 const ProjectSection: React.FC<{ title: string; content: string }> = ({ title, content }) => (
     <div className="mb-6">

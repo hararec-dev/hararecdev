@@ -1,6 +1,6 @@
 import { useEffect, useRef, useContext } from 'react';
-import { ThemeContext } from '../../context';
-import type { CanvasPoint } from '../../types';
+import { ThemeContext } from '@context';
+import type { CanvasPoint } from '@types';
 
 export const BackgroundCanvas = () => {
   const canvasRef: React.RefObject<HTMLCanvasElement> = useRef<HTMLCanvasElement>(null);
