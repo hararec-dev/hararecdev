@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css'; // Assuming globals.css will be populated later
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hararecdev.com'), // Required for resolving relative paths in openGraph images
@@ -67,7 +68,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-RE13HNW1GD"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-RE13HNW1GD');
+            `,
+          }}
+        />
+      </body>
     </html>
   )
 }

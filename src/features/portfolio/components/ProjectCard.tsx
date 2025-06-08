@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react";
+import Image from 'next/image'; // Added import
 import { motion } from "framer-motion";
 import type { ProjectCardProps } from "@/features/portfolio/types";
 
@@ -20,20 +21,28 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails
             viewport={{ amount: 0.2 }}
         >
             {mediaType === 'image' && mediaUrl && (
-                <img
-                    src={mediaUrl}
-                    alt={project.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
-                />
+                <div className="relative w-full h-64">
+                    <Image
+                        src={mediaUrl}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        loading="lazy"
+                    />
+                </div>
             )}
             {mediaType === 'gif' && mediaUrl && (
-                <img
-                    src={mediaUrl}
-                    alt={project.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
-                />
+                <div className="relative w-full h-64">
+                    <Image
+                        src={mediaUrl}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        loading="lazy"
+                    />
+                </div>
             )}
             {mediaType === 'video' && mediaUrl && (
                 <video

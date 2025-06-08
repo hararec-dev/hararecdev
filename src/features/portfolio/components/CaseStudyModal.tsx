@@ -1,5 +1,6 @@
 'use client';
 import { useEffect } from 'react';
+import Image from 'next/image'; // Added import
 import { motion } from 'framer-motion';
 import type { CaseStudyModalProps, Visual } from "@/features/portfolio/types";
 
@@ -11,9 +12,16 @@ const ProjectSection: React.FC<{ title: string; content: string }> = ({ title, c
 );
 
 const VisualContent: React.FC<{ visual: Visual; projectTitle: string }> = ({ visual, projectTitle }) => (
-    <div className="rounded-lg overflow-hidden shadow-md">
+    // Added relative and aspect-ratio for the fill strategy
+    <div className="relative rounded-lg overflow-hidden shadow-md aspect-[16/9]">
         {visual.type === 'image' ? (
-            <img src={visual.url} alt={visual.alt || projectTitle} className="w-full h-auto object-cover" />
+            <Image
+                src={visual.url}
+                alt={visual.alt || projectTitle}
+                fill
+                className="object-cover" // w-full h-auto are implicit with fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Example sizes
+            />
         ) : visual.type === 'video' ? (
             <video src={visual.url} controls className="w-full h-auto">
                 Su navegador no soporta la etiqueta de vídeo.

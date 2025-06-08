@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import Image from 'next/image'; // Added import
 import { ThemeContext } from '@/common/context/ThemeContext';
 import logoDark from '/images/logo_dark.png';
 import logoLight from '/images/logo_light.png';
@@ -14,8 +15,8 @@ export const Logo: React.FC<{ className?: string }> = ({ className }) => {
                     top: 0,
                     behavior: 'smooth'
                 })}>
-                    <img
-                        src={(context.theme === 'dark' ? logoDark : logoLight).src}
+                    <Image
+                        src={context.theme === 'dark' ? logoDark : logoLight}
                         alt="logo"
                         className="h-12 xl:h-14 w-auto object-contain"
                     />

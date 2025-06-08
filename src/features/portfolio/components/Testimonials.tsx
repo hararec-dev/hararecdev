@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Image from 'next/image'; // Added import
 import type { TestimonialItem, TestimonialsProps } from "@/features/portfolio/types";
 
 export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, displayMode = 'grid' }) => {
@@ -16,19 +17,23 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, displa
             viewport={{ amount: 0.2 }}
         >
             {testimonial.logoUrl && (
-                <img
+                <Image
                     src={testimonial.logoUrl}
                     alt={testimonial.company || testimonial.author}
-                    className="h-12 mb-4 object-contain dark:invert-[0.8]"
+                    width={48}
+                    height={48}
+                    className="mb-4 object-contain dark:invert-[0.8]"
                 />
             )}
             <p className="text-gray-600 dark:text-gray-300 italic mb-4 text-lg leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
             <div className="flex items-center mt-auto">
                 {testimonial.authorImageUrl && (
-                    <img
+                    <Image
                         src={testimonial.authorImageUrl}
                         alt={testimonial.author}
-                        className="w-12 h-12 rounded-full mr-4 object-cover"
+                        width={48}
+                        height={48}
+                        className="rounded-full mr-4 object-cover"
                     />
                 )}
                 <div>

@@ -1,5 +1,6 @@
 'use client';
 import { useContext } from 'react';
+import Image from 'next/image'; // Added import
 import { motion } from 'framer-motion';
 import { FooterCopyright } from '@/features/footer/components/FooterCopyright';
 import { ContactForm } from '@/features/footer/components/ContactForm';
@@ -25,10 +26,10 @@ export const Footer: React.FC = () => {
                     animate={{ y: 0 }}
                     transition={{ duration: 0.7, ease: 'easeOut' }}
                 >
-                    <img
-                        src={(context.theme === 'dark'? contactDark : contactLight).src}
+                    <Image
+                        src={context.theme === 'dark'? contactDark : contactLight}
                         alt="Contacto ilustración"
-                        className="w-3/4 lg:w-2/5 drop-shadow-xl rounded-2xl"
+                        className="w-3/4 lg:w-2/5 h-auto drop-shadow-xl rounded-2xl" // Added h-auto
                     />
                     <div className="flex-1 w-full">
                         <ContactForm />

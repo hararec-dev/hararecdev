@@ -1,5 +1,6 @@
 'use client';
 import { useContext } from "react";
+import Image from 'next/image'; // Added import
 import { ThemeContext } from "@/common/context/ThemeContext";
 import type { CarouselProps } from "@/common/types";
 
@@ -27,12 +28,15 @@ export const Carousel: React.FC<CarouselProps> = ({ items }) => {
                     style={{ width: `${(duplicated.length / visibleItems) * 100}%` }}
                 >
                     {duplicated.map((item, idx) => (
-                        <img
-                            key={idx}
-                            src={theme === 'dark' ? item.srcDark : item.srcLight}
-                            alt={item.alt}
-                            className="object-contain h-8 w-1/6 sm:w-1/6 md:w-1/6 lg:h-10 lg:w-1/6 rounded"
-                        />
+                        <div key={idx} className="relative h-8 w-1/6 sm:w-1/6 md:w-1/6 lg:h-10 lg:w-1/6">
+                            <Image
+                                src={theme === 'dark' ? item.srcDark : item.srcLight}
+                                alt={item.alt}
+                                fill
+                                sizes="(max-width: 640px) 16.6vw, (max-width: 1024px) 16.6vw, 16.6vw"
+                                className="object-contain rounded"
+                            />
+                        </div>
                     ))}
                 </div>
             </div>
