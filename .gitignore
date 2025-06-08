@@ -87,3 +87,4 @@ next-env.d.ts
 *.debug.ts
 *.debug.js
 /meta/
+/app/generated/prisma
