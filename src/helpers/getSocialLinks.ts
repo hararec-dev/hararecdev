@@ -3,7 +3,7 @@ import type { SocialLink } from "../types";
 export const getSocialLinks = (): SocialLink[] => {
     return [
         {
-            href: `https://api.whatsapp.com/send?phone=525542084239&text=${encodeURIComponent('¡Hola!, quiero hablar de mi nuevo proyecto 🚀')}`,
+            href: `https://api.whatsapp.com/send?phone=525647431773&text=${encodeURIComponent('¡Hola!, quiero hablar de mi nuevo proyecto 🚀')}`,
             bgColor: 'bg-green-500',
             hoverColor: 'hover:bg-green-600',
             shadowColor: 'shadow-green-500/70',
@@ -12,7 +12,7 @@ export const getSocialLinks = (): SocialLink[] => {
             delay: 0.2,
         },
         {
-            href: 'tel:+525542084239',
+            href: 'tel:+525647431773',
             bgColor: 'bg-blue-500',
             hoverColor: 'hover:bg-blue-600',
             shadowColor: 'shadow-blue-500/70',

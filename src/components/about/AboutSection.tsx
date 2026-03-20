@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { SummaryText } from './SummaryText';
 import { SectionTitle } from '../shared';
-import imageSrc from '/images/selfie.png';
+import imageSrc from '/images/foto_perfil_alta_def.png';
 import type { ProfileData } from '../../types';
 
 const PROFILE_DATA: ProfileData = {
@@ -30,7 +30,7 @@ export const AboutSection: React.FC = () => {
         >
             <SectionTitle
                 headerTitle='Sobre mí'
-                headerSubtitle='¡Hola! Soy Hararec, desarrollador con +3 años creando apps y webs. Mi misión es simple: Ayudarte a digitalizar tu negocio sin que la tecnología sea un dolor de cabeza. Trabajo contigo en español, en tu horario y desde CDMX. No soy una agencia costosa ni un freelancer distante, soy tu socio de confianza.'
+                headerSubtitle='¡Hola! Soy Hararec, desarrollador con +4 años creando apps y webs. Mi misión es simple: Ayudarte a digitalizar tu negocio sin que la tecnología sea un dolor de cabeza. No soy una agencia costosa ni un freelancer distante, soy tu socio de confianza.'
                 imageAlt='Sobre mí'
                 imageSrc={imageSrc}
                 methodologyItems={[]}
