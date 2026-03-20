@@ -3,7 +3,7 @@ import { BootstrapIcon } from "./BootstrapIcon";
 
 export const WhatsAppButton = () => {
     const whatsappLink = {
-        href: `https://api.whatsapp.com/send?phone=525542084239&text=${encodeURIComponent('¡Hola!, quiero hablar de mi nuevo proyecto 🚀')}`,
+        href: `https://api.whatsapp.com/send?phone=525647431773&text=${encodeURIComponent('¡Hola!, quiero hablar de mi nuevo proyecto 🚀')}`,
         bgColor: 'bg-green-500',
         hoverColor: 'hover:bg-green-600',
         shadowColor: 'shadow-green-500/70',
